@@ -4,11 +4,27 @@ enum DatePickerLocale {
   en_us,
   ko_kr,
   fr_fr,
+  it
 }
 
 extension DatePickerLocaleExtension on DatePickerLocale {
   dynamic get month {
     switch (this) {
+      case DatePickerLocale.it:
+        return [
+          'Gennaio',
+          'Febbraio',
+          'Marzo',
+          'Aprile',
+          'Maggio',
+          'Giugno',
+          'Luglio',
+          'Agosto',
+          'Settembre',
+          'Ottobre',
+          'Novembre',
+          'Dicembre'
+        ];
       case DatePickerLocale.en_us:
         return [
           'January',
